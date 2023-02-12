@@ -1,0 +1,5 @@
+node_modules
+mongodb-windows-x86_64-6.0.3-signed.msi
+dist 
+build 
+release-builds

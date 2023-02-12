@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La esquina Glupis</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="ui/css/style.css">
+    <link rel="stylesheet" href="ui/css/bootstrap.css">
+    <!-- {{!-- FONTAWESOME --}} -->
+    <script src="https://kit.fontawesome.com/42b6e33a0a.js" crossorigin="anonymous"></script>
+    <!-- {{!-- Google fonts icons --}} -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0" />
+</head>
+<body>
+ <main>
+    <div class="logo-container">
+        <img class="logo" src="ui/img/glupis_la_esquina logo.png" alt="Logo">
+    </div>
+
+    <div class="edit-modal-container" id="edit-modal-container">
+        <div id="close-icon" class="close-icon">
+            <span class="bar-x-1"></span>
+            <span class="bar-x-2"></span>
+        </div>
+
+        <div class="edit-elements-container">
+            <div class="logo-container">
+                <img class="logo new-product" src="ui/img/glupis_la_esquina logo.png" alt="Logo">
+            </div>
+                        <div class="h2 title">Editar producto</div>
+                        <form class="editForm" action="" id="editForm">
+                            <input id="editCategory" type="text" name="category" class="form-control edit" id="category" placeholder="Categoría" ></td>
+                            <input id="editBrand" type="text" name="brand" class="form-control edit" placeholder="Marca" ></td>
+                            <input id="editProduct" type="text" name="product" class="form-control edit" placeholder="Producto" ></td>
+                            <input id="editStock" type="number" min="0" name=""  class="form-control  edit num"  placeholder="Stock"></td>
+                            <input id="editMinStock" type="number" name="minStock" class="form-control edit num "  placeholder="Mínimo permitido" ></td>
+                            <input id="editDateOff" type="date" name="dateOff" class="form-control edit"  placeholder="Vencimiento" ></td>
+                            
+                            <div class="button-container">
+                                <button class="form-control btn btn-new-product" type="submit">
+                                    Guardar    
+                                </button>
+                            </div>
+                    
+                            
+                        </form>
+                   
+
+        </div>
+        
+    </div>
+    
+    
+<div class="table-responsive">
+    <table class="table table-hover table-bordered " id="" >
+        <thead class="table-dark">
+            <tr>
+                <th>Categoría</th>
+                <th>Marca</th>
+                <th>Producto</th>
+                <th>Stock</th>
+                <th class="th-dateOff">Venc.</th>
+                <th>Acciones</th>
+                
+            </tr>
+        </thead>
+
+        <tbody id="productsBody">
+           
+        </tbody>
+    </table>
+
+   
+</div>
+
+<div class="modal-container">
+    <div class="modal">
+        
+            <div class="card-container">
+                <div class="card border-primary mb-3" style="width: 97%; ">
+                    <div class="card-header">La esquina Glupis</div>
+                    
+                    <div class="card-body">
+                    <h6 class="card-title">by</h4>
+                    <h1 class="card-title title">Cristian Bazán</h4>
+                    <div class="li-container">
+                        <h5>Programador</h3>
+                        <li class="card-text">Diseño de páginas web</p>
+                        <li class="card-text">Programación de aplicaciones web</p>
+                        <li class="card-text">E-commerce</p>
+                        <li class="card-text">Integración de aplicaciones a escritorio</p>
+                        <li class="card-text">Asesoramiento en diseño gráfico y branding</p>
+                            <li class="card-text">Redacción de contenidos</p>
+                    </div>
+                
+                    </div>
+                    <a id="link" class="btn btn-primary" >Contacto</a>
+
+                    <button id="ok" class="btn btn-secondary" href="https://linktr.ee/cristianbazan">Ok, dejame seguir trabajando</a>
+                </div>  
+    
+            
+           
+    </div>
+</div>
+ </main>
+
+
+    
+
+    <script src="ui/app.js"></script>
+
+    <script>
+        var open = require("open"); 
+
+        const logoClick = document.querySelector('.logo');
+        const modal = document.querySelector('.modal')
+
+        
+
+        const closeModal = document.querySelector('#ok')
+        logoClick.addEventListener('click', ()=>{
+            modal.classList.toggle('active')
+        })
+
+        closeModal.addEventListener('click', ()=>{
+            modal.classList.remove('active')
+        })
+
+        const link = document.querySelector("#link")
+        link.addEventListener('click', ()=>{
+            open("https://linktr.ee/cristianbazan", "chrome")
+        })
+
+        const editModalContainer = document.querySelector(".edit-modal-container");
+        const closeEditModal = document.querySelector("#close-icon");
+
+        closeEditModal.addEventListener('click', ()=>{
+            editModalContainer.classList.remove("active");
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+:root{
+    --background: linear-gradient(0deg,#493240, #FF0099);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    
+}
+
+
+main{
+    height: 100%; 
+    background: var(--background);  
+}
+
+.logo-container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0;   
+    user-select: none;
+}
+
+.logo{
+    max-width: 250px;
+    max-height: 250px;
+    user-select: none;
+}
+
+.new-product-form{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.h1.title{
+    display: flex;
+    justify-content: center;
+    color: #fff; 
+}
+
+.logo.new-product{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn-new-product{
+
+    background: #fff; 
+    color:rgba(250, 36, 196, 0.959); 
+    transition:  background 500ms;
+}
+
+.btn.btn-new-product:hover{
+    transition:  background 500ms;
+    color: #fff; 
+    background:rgba(250, 36, 196, 0.959); 
+}
+
+.stock{
+    width: 3.5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #f7f7f9;
+    background-clip: padding-box;
+    border: 0 solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.stock:focus{
+        color: #55595c;
+        background-color: #f7f7f9;
+        border-color: #8d8d8d;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(250, 36, 196, 0.959);
+      
+}
+
+.body-newProduct{
+    height: 100vh;
+    background: var(--background);
+}
+
+
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-title{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-title.title{
+    color: #222;
+}
+
+.li-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-header{
+    text-align: center;
+}
+
+.drag{
+    -webkit-app-region: drag;
+}
+
+.no-drag{
+    -webkit-app-region: no-drag;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0099;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+ 
+
+  .modal.active{
+    display: block;
+    /* justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;  */
+    opacity: 1; 
+    animation: appear 1s; 
+  }
+  
+@keyframes appear {
+    from{
+        opacity: 0; 
+    }
+    to{
+        opacity: 1; 
+    }
+}
+
+
+   .modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: none;
+
+  }  
+
+
+  .edit-modal-container{
+    display: none; 
+    opacity: 0;
+    width: 300px;
+    height: 630px;  
+    position: fixed;
+    border: 5px #222;
+    top: 2em; 
+    left: 50px;
+    background: var(--background);
+    box-shadow: -1px 2px 11px 4px rgba(0,0,0,0.82);
+    -webkit-box-shadow: -1px 2px 11px 4px rgba(0,0,0,0.82);
+    -moz-box-shadow: -1px 2px 11px 4px rgba(0,0,0,0.82);
+}
+
+  .edit-modal-container.active{
+    display: block; 
+    opacity: 1; 
+    animation: appear 1s;
+  }
+
+.edit-elements-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h2.title{
+    color: #fff; 
+    text-align: center;
+}
+
+.form-control.edit{
+    max-width: 10em;
+    max-height: 2.5em; 
+}
+
+.close-icon{
+    position: absolute; 
+    top: 0;
+    right: 0; 
+    padding: 1rem; 
+    margin-bottom: auto; 
+    margin-left: auto; 
+    cursor: pointer;   
+    z-index: 2; 
+}
+
+
+.bar-x-1{
+    display: block; 
+    width: 20px; 
+    height: 3px; 
+    margin: 5px auto; 
+    transform: translateY(4px) rotate(45deg);
+    background-color: #fff; 
+
+}
+
+.bar-x-2{
+    display: block; 
+    width: 20px; 
+    height: 3px; 
+    margin: 5px auto; 
+    transform: translateY(-4px) rotate(-45deg);
+    background-color: #fff; 
+
+}
+
+.button-container.two{
+    gap: 50px;
+}
